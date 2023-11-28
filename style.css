@@ -1,0 +1,149 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,500&display=swap');
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* global */
+:root{
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+body{
+    background-color: var(--Light-grayish-blue);
+    font-size: 15px;
+    min-height:100vh ;
+    position: relative;
+
+
+}
+.h1,.opacity ,img {
+    margin:15px;
+}
+.h1{
+    font-size: 1.3em;
+
+}
+.opacity , .sub-title{
+    font-size: 1em;
+    opacity: 50%;
+}
+.item1{grid-area: box1;}
+.item2{grid-area: box2;}
+.item3{grid-area: box3;}
+.item4{grid-area: box4;}
+.item5{grid-area: box5;}
+
+/* main */
+.containar{
+    display: grid;
+    background-color: var(--Light-grayish-blue);
+    border: 20px;
+    
+}
+
+img{
+    border-radius: 50%;
+   
+}
+
+img ,.title,.sub-title  {
+    display: inline;
+    vertical-align: middle;
+}
+
+.item1{
+    background-color: var(--Moderate-violet);
+    color: var(--White);
+    /* margin: 3px; */
+}
+.item1 .opacity{
+    font-size: 0.9em;
+}
+.item2{
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--White);
+}
+.item2 .h1 {
+    font-size: 1.7em;
+}
+.item2 .opacity {
+    font-size: 1.4em;
+}
+
+.item3{
+    background-color: var(--White);
+    color: var(--Very-dark-blackish-blue);
+}
+.item3 .h1 {
+    font-size: 1.8em;
+}
+.item3 .opacity {
+    font-size: 1.56em;
+}
+
+.item4{
+    background-color: var(--White);
+    color: var(--Very-dark-blackish-blue);
+}
+.item4 .h1{
+    font-size: 1.9em;
+}
+.item4 .opacity{
+    font-size: 1.3em;
+}
+.item5{
+    background-color:var(--Very-dark-blackish-blue) ;
+    color: var(--White);
+}
+.item5 .h1{
+    font-size: 1.2em;
+}
+.item5 .opacity{
+    font-size: 0.8em;
+    
+}
+
+#grid
+{
+    
+    width: auto ;
+    padding: 6.5rem;
+    margin-bottom: 1.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4/ 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "box1 box1  box2 box3 "
+    "box1 box1  box2 box3 "
+    "box4 box5 box5 box3 "
+    ;
+    row-gap: 20px;
+    column-gap: 20px;   
+
+} 
+#grid > div{
+    border-radius: 10px;
+}
+
+
+
+/* media query */
